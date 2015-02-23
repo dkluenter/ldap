@@ -1,0 +1,137 @@
+# $Id:$
+dn: o=hufsm
+objectClass: organization
+o: hufsm
+description: Wurzeleintrag fuer Huf-sm
+
+dn: ou=customers,o=hufsm
+objectClass: organizationalUnit
+ou: customers
+description:: V3VyemVsZWludHJhZyBmw7xyIEN1c3RvbWVycw==
+
+dn: ou=users,o=hufsm
+objectClass: organizationalUnit
+ou: users
+businessCategory: Administratoren
+description: Container fuer alle Administatoren
+
+dn: cn=c1,ou=customers,o=hufsm
+objectClass: organizationalRole
+cn: c1
+l: Frankfurt Main
+street: some street
+postalCode: 63075
+telephoneNumber: 069555333
+description: ein Reseller
+
+dn: cn=c2,ou=customers,o=hufsm
+objectClass: organizationalRole
+cn: c2
+l: Berlin
+postalCode: 12345
+street: nasenbohrer str.
+telephoneNumber: 0301234567
+description: ein Kunde von c1
+postOfficeBox: 23 12
+
+dn: cn=admin_1,ou=users,o=hufsm
+objectClass: organizationalPerson
+cn: admin_1
+sn: admin_1
+userPassword:: cGFzc3dvcmRfMQ==
+description: admin von c1
+
+dn: cn=admin_2,ou=users,o=hufsm
+objectClass: organizationalPerson
+cn: admin_2
+sn: admin_2
+userPassword:: cGFzc3dvcmRfMg==
+description: admin von c2
+
+dn: cn=admin_3,ou=users,o=hufsm
+objectClass: organizationalPerson
+cn: admin_3
+sn: admin_3
+userPassword:: cGFzc3dvcmRfMw==
+description: admin von c3
+telephoneNumber: 03012345678
+
+dn: cn=kunden,cn=c1,ou=customers,o=hufsm
+objectClass: groupOfNames
+cn: kunden
+member: cn=c2,ou=customers,o=hufsm
+member: cn=c3,ou=customers,o=hufsm
+description: kunden von c1
+
+dn: cn=users,cn=c1,ou=customers,o=hufsm
+objectClass: groupOfNames
+cn: users
+member: cn=admin_c1,ou=users,o=hufsm
+member: cn=admin_c2,ou=users,o=hufsm
+description: Berechtigungsgruppe von c1
+
+dn: cn=licences,cn=c1,ou=customers,o=hufsm
+objectClass: applicationProcess
+cn: licences
+ou: customer_1
+description: Container der Lizenen von c1
+
+dn: cn=leitstand,cn=licences,cn=c1,ou=customers,o=hufsm
+objectClass: groupOfNames
+cn: leistand
+cn: leitstand
+o: c1
+member: cn=c2,ou=customers,o=hufsm
+member: cn=c3,ou=customers,o=hufsm
+description: Leitstandberechtigte von c1
+
+dn: cn=unfallanalyse,cn=licences,cn=c1,ou=customers,o=hufsm
+objectClass: groupOfNames
+cn: unfallanalyse
+o: c1
+member: cn=c2,ou=customers,o=hufsm
+
+dn: cn=fahrtenbuch,cn=licences,cn=c1,ou=customers,o=hufsm
+objectClass: groupOfNames
+cn: fahrtenbuch
+o: c1
+member: cn=c3,ou=customers,o=hufsm
+
+dn: cn=hosts,cn=c1,ou=customers,o=hufsm
+objectClass: applicationProcess
+cn: hosts
+ou: c1
+description: fqdn der Hosts von c1
+
+dn: cn=c3,ou=customers,o=hufsm
+objectClass: organizationalRole
+cn: c3
+l: Hamburg
+street: Elbchaussee 123
+postalCode: 22147
+telephoneNumber: 04012345678
+description: noch ein Kunde von c1
+
+dn: cn=c4,ou=customers,o=hufsm
+objectClass: organizationalRole
+cn: c4
+ou: Grosskunde 2
+postalCode: 54321
+l: Velbert
+telephoneNumber: 018054367
+street: Blafasel Str. 12
+
+dn: cn=h4711111999,cn=hosts,cn=c1,ou=customers,o=hufsm
+objectClass: account
+objectClass: iphost
+cn: h4711111999
+uid: host_1
+ipHostNumber: host_1.mydomain,com
+
+dn: cn=Replicator,ou=users,o=hufsm
+objectClass: person
+cn: Replicator
+sn: Replicator
+userPassword:: Z2VoZWlt
+description: Replikationsverantwortlicher
+
