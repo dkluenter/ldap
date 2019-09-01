@@ -1,0 +1,42 @@
+# $Id: LDAP-Result-Codes,v 1.1 2011/02/17 16:19:37 dieter Exp dieter $
+RFC4511, Section 4.1.9. Result Message
+
+0	success
+1	operationsError
+2	protocolError
+3	timelimitExceeded
+4	sizelimitExceeded
+5	compareFalse
+6	compareTrue
+7	authMethodNotSupported
+8	strongerAuthRequired
+10	Referral
+11	adminlimitExceeded
+13	confidentiallyRequired
+14	saslBindinProgess
+16	noSuchAttribute
+17	undefinedAttributeType
+18	inappropriateMatching
+19	constraintViolation
+20	attributeOrValueExists
+21	invalidAttributeSyntax
+32	noSuchObject
+33	aliasProblem
+34	invalidDNSyntax
+36	aliasDereferencingProblem
+48	inappropriateAuthentication
+49	invalidCredentials
+50	insufficientAccessRights
+51	busy
+52	unavailable
+53	unwillingToPerform
+54	loopDetect
+64	namingViolation
+65	objectClassViolation
+66	notAllowedOnNonLeaf
+67	notAllowedOnRDN
+68	entryAlreadyExists
+69	objectClassModsProhibited
+71	affectsMultipleDSAs
+80	other
+123	Error in ProxyAuthz
